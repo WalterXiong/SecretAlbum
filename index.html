@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SecretAlbum</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- 网站icon -->
+  <link rel="icon" href="https://raw.githubusercontent.com/jaywcjlove/awesome-mac/master/build/favicon.ico">
+  <!-- 默认主题 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- Theme: Simple (latest v0.x.x) -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+
+  <!-- 暗黑主题插件样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" />
+
+</head>
+
+<body>
+
+  <div id="app">Loading...</div>
+  <!-- <div id="gitalk-container"></div> -->
+
+  <!-- 在github上编辑插件 -->
+  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+
+  <script>
+    window.$docsify = {
+      // 项目名称
+      name: 'SecretAlbum',
+      nameLink: '#/',
+      //logo: './Java/logo.jpg',
+
+      // 在找不到指定页面时加载_404.md
+      notFoundPage: true, 
+
+      // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
+      repo: 'https://github.com/Pikapika-OvO',
+      
+      // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
+      loadSidebar: true,
+
+      // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
+      loadNavbar: true,
+
+      // 封面支持，默认加载的是项目根目录下的_coverpage.md文件
+      coverpage: true,
+
+      // 最大支持渲染的标题层级
+      maxLevel: 5,
+
+      // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
+      subMaxLevel: 2,
+
+      // 小屏设备下合并导航栏到侧边栏
+      mergeNavbar: true,
+
+      homepage: 'README.md',
+      
+      //切换页面后是否自动跳转到页面顶部
+      auto2top: true,
+
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+
+      formatUpdated: function(time) {
+        // ...
+
+        return time;
+      },
+
+      // ************************* Plugins *************************
+      //全文搜索
+      search: {
+        //maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😞 找不到结果',
+        // 搜索标题的最大程级, 1 - 6
+        depth: 3,
+      },
+
+      //字数统计，需要引入js
+      count:{
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese',
+      },
+
+      //分页
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+
+      //代码一键复制
+      copyCode: {
+          buttonText: '复制',
+          errorText: 'Error',
+          successText: '复制成功'
+      },
+
+      // 主题：
+      // themeable: {
+      //   // 确定在等待站点初始化时是否显示加载指示器，然后在初始化完成后显示淡入淡出过渡。
+      //   readyTransition: true, // default
+      //   // 响应式表格
+      //   responsiveTables: true, // default
+      // },
+
+      // themeColor: "#42b983", // 暗黑模式主题色 //themeColor: '#65b687',
+      // darklightTheme: {
+      //   siteFont: "PT Sans",
+      //   defaultTheme: 'dark',
+      //   codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
+      //   bodyFontSize: '17px',
+      //   dark: {
+      //     accent: '#42b983',
+      //     toogleBackground: '#ffffff',
+      //     background: '#091a28',
+      //     textColor: '#b4b4b4',
+      //     codeTextColor: '#ffffff',
+      //     codeBackgroudColor: '#0e2233',
+      //     borderColor: '#0d2538',
+      //     blockQuoteColour: '#858585',
+      //     highlightColor: '#d22778',
+      //     sidebarSublink: '#b4b4b4',
+      //     codeTypeColor: '#ffffff',
+      //     coverBackground: 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(181, 100%, 85%) 100%)',
+      //     toogleImage: 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/sun.svg)'
+      //   },
+      //   light: {
+      //     accent: '#42b983',
+      //     toogleBackground: '#091a28',
+      //     background: '#ffffff',
+      //     textColor: '#34495e',
+      //     codeTextColor: '#525252',
+      //     codeBackgroudColor: '#f8f8f8',
+      //     borderColor: 'rgba(0, 0, 0, 0.07)',
+      //     blockQuoteColor: '#858585',
+      //     highlightColor: '#d22778',
+      //     sidebarSublink: '#b4b4b4',
+      //     codeTypeColor: '#091a28',
+      //     coverBackground: 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(181, 100%, 85%) 100%)',
+      //     toogleImage: 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/moon.svg)'
+      //   }
+      // },  
+
+
+      // 在 GitHub 上编辑
+      plugins: [
+        EditOnGithubPlugin.create(
+          'https://github.com/lexmin0412/docsify-website-sample/blob/master/docs/',
+          null,
+          function ( file ) {
+            if ( file.indexOf( 'en' ) === -1 ) {
+              return '在 GitHub 上编辑'
+            } else {
+              return 'Edit on Github'
+            }
+          }
+        )
+      ],
+      
+    }
+  </script>
+
+  <!-- Plugins：gitalk -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'GitHub Application Client ID',         // GitHub Application Client ID
+      clientSecret: 'GitHub Application Client Secret', // GitHub Application Client Secret
+      repo: 'GitHub repo',        // 存放评论的仓库
+      owner: 'GitHub repo owner', // 仓库的创建者，
+      admin: [''],                // 如果仓库有多个人可以操作，那么在这里以数组形式写出
+      id: location.pathname,      // 用于标记评论是哪个页面的，确保唯一，并且长度小于50
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+  </script>-->
+
+  <!-- Docsify v4 核心依赖-->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- emoji表情支持 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- 图片放大缩小支持 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 搜索功能支持 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!--代码复制-->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script> -->
+  <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!--不同代码的高亮-->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-c.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-cpp.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-sql.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-c.js"></script>
+  <script src="//unpkg.com/prismjs@1.23.0/components.js"></script>
+  <!--分页-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!--主题-->
+  <!-- docsify-themeable (latest v0.x.x) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+
+  <!-- 阅读进度条插件 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+  <!-- 暗黑主题切换插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+
+
+</body>
+
+</html>
